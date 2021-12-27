@@ -1,0 +1,148 @@
+:root {
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-lighter-cyan: hsl(179, 47%, 52%);
+    --clr-yellow: hsl(71, 73%, 54%);
+    --clr-gray: hsl(204, 43%, 93%);
+    --clr-blue: hsl(218, 22%, 67%);
+}
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    background-color: var(--clr-gray);
+    line-height: 1.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cards {
+    width: 86%;
+    max-width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgb(1 1 1 / 20%);
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
+        margin: 0;
+    }
+
+    .card-intro {
+        grid-column: 1 / span 2;
+    }
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-intro .card-title {
+    color: var(--clr-cyan);
+    margin-bottom: 2rem;
+}
+
+.card-intro .card-body {
+    color: var(--clr-blue);
+}
+
+.card-intro .card-subtitle {
+    color: var(--clr-yellow);
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+}
+
+@media (min-width: 700px) {
+    .card-intro .card-title {
+        font-size: 2.5rem;
+    }
+
+    .card-intro .card-subtitle {
+        font-size: 1.8rem;
+    }
+}
+.card-price .card-title,
+.card-reasons .card-title {
+    margin-bottom: 1.4rem;
+}
+
+.card-price .btn {
+    display: block;
+    text-decoration: none;
+    background-color: var(--clr-yellow);
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-price .btn:hover,
+.card-price .btn:focus {
+    background-color: hsl(50, 73%, 54%);
+}
+
+.card-price-number {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.card-price-number span:nth-child(1) {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.card-price-number span:nth-child(2) {
+    opacity: 0.6;
+}
+
+.card-price .card-body {
+    margin-bottom: 2rem;
+}
+
+.card {
+    padding: 2.5rem;
+}
+
+@media (min-width: 700px) {
+    .card {
+        padding: 4rem;
+    }
+}
+
+.card-intro {
+    background-color: white;
+}
+
+.card-price {
+    background-color: var(--clr-cyan);
+}
+
+.card-reasons {
+    background-color: var(--clr-lighter-cyan);
+}
